@@ -1,0 +1,12 @@
+﻿@page "/testrgb"
+@inject HttpClient Http
+<div class="test-box">
+    <button @onclick="@TestRgb">RGB!</button>
+</div>
+
+@code {
+    private async Task TestRgb()
+    {
+        await Http.GetAsync("WebRgb");
+    }
+}

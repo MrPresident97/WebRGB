@@ -1,0 +1,756 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenRGB.NET</name>
+    </assembly>
+    <members>
+        <member name="T:OpenRGB.NET.Enums.ColorMode">
+            <summary>
+            Enum representing how a specific Mode uses
+            the colors assigned to it.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ColorMode.None">
+            <summary>
+            The mode does not use any color.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ColorMode.PerLed">
+            <summary>
+            The mode sets each led to a specific color.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ColorMode.ModeSpecific">
+            <summary>
+            The mode uses one color, specific to the effect.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ColorMode.Random">
+            <summary>
+            The mode has no set color, uses random colors instead.
+            </summary>
+        </member>
+        <member name="T:OpenRGB.NET.Enums.DeviceType">
+            <summary>
+            Enum representing the various device types supported.
+            </summary>
+        </member>
+        <member name="T:OpenRGB.NET.Enums.Direction">
+            <summary>
+            Enum representing the various directions a specific mode can have.
+            </summary>
+        </member>
+        <member name="T:OpenRGB.NET.Enums.ModeFlags">
+            <summary>
+            Flags representing the capabilities a mode can have.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ModeFlags.None">
+            <summary>
+            This mode has no capabilities.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ModeFlags.HasSpeed">
+            <summary>
+            This mode has a speed parameter.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ModeFlags.HasDirectionLR">
+            <summary>
+            This Mode has a Left-Right direction paramenter.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ModeFlags.HasDirectionUD">
+            <summary>
+            This Mode has an Up-Down direction paramenter.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ModeFlags.HasDirectionHV">
+            <summary>
+            This Mode has an Horizontal-Vertical direction paramenter.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ModeFlags.HasBrightness">
+            <summary>
+            This Mode has a brightness paramenter.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ModeFlags.HasPerLedColor">
+            <summary>
+            This Mode has per-LED colors.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ModeFlags.HasModeSpecificColor">
+            <summary>
+            This Mode has mode specific colors.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ModeFlags.HasRandomColor">
+            <summary>
+            This Mode has a random color option.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ModeFlags.HasDirection">
+            <summary>
+            This mode has a direction parameter in any orientation.
+            </summary>
+        </member>
+        <member name="T:OpenRGB.NET.Enums.ZoneType">
+            <summary>
+            Enum representing the different types a zone can be.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ZoneType.Single">
+            <summary>
+            This zone represents one LED.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ZoneType.Linear">
+            <summary>
+            This zone represents s sequence of LEDs in a line, like an LED strip.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.Enums.ZoneType.Matrix">
+            <summary>
+            This zone represents a matrix of LEDs in a grid, like a keyboard.
+            </summary>
+        </member>
+        <member name="T:OpenRGB.NET.CommandId">
+            <summary>
+            Enum representing the various commands supported by the SDK server.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.RequestControllerCount">
+            <summary>
+            Request the number of device controllers from the server.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.RequestControllerData">
+            <summary>
+            Request the data block of a controller from the server.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.RequestProtocolVersion">
+            <summary>
+            Request the latest supported SDK server protocol version.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.SetClientName">
+            <summary>
+            Send the server the name of the client.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.RequestProfiles">
+            <summary>
+            Request list of profiles from the server.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.SaveProfile">
+            <summary>
+            Saves the current profile to disk.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.LoadProfile">
+            <summary>
+            Load a given profile.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.DeleteProfile">
+            <summary>
+            Delete a given profile.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.ResizeZone">
+            <summary>
+            Calls RGBController::ResizeZone() on the server. Not implemented.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.UpdateLeds">
+            <summary>
+            Calls RGBController::UpdateLEDs() on the server.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.UpdateZoneLeds">
+            <summary>
+            Calls RGBController::UpdateZoneLEDs() on the server.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.UpdateSingleLed">
+            <summary>
+            Calls RGBController::UpdateSingleLED() on the server. Not implemented.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.SetCustomMode">
+            <summary>
+            Calls RGBController::SetCustomMode() on the server.
+            </summary>
+        </member>
+        <member name="F:OpenRGB.NET.CommandId.UpdateMode">
+            <summary>
+            Calls RGBController::UpdateMode() on the server.
+            </summary>
+        </member>
+        <member name="T:OpenRGB.NET.IOpenRGBClient">
+            <summary>
+            Interface for an OpenRGB SDK client.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.IOpenRGBClient.Connected">
+            <summary>
+            Represents the connection status of the socket to the server
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.IOpenRGBClient.MaxSupportedProtocolVersion">
+            <summary>
+            The maximum protocol version this implementation supports
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.IOpenRGBClient.ClientProtocolVersion">
+            <summary>
+            The protocol version to be used by this instance of <see cref="T:OpenRGB.NET.IOpenRGBClient"/>
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.IOpenRGBClient.ProtocolVersion">
+            <summary>
+            The minimum common protocol version between this client and the connected server. Only set after the first <see cref="M:OpenRGB.NET.IOpenRGBClient.Connect"/>
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.IOpenRGBClient.Connect">
+            <summary>
+            Connects manually to the server. Only needs to be called if the constructor was called
+            with autoconnect set to false.
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.IOpenRGBClient.GetAllControllerData">
+            <summary>
+            Requests the data for all the controllers detected by the server.
+            </summary>
+            <returns>An array with the information for all the devices.</returns>
+        </member>
+        <member name="M:OpenRGB.NET.IOpenRGBClient.GetControllerCount">
+            <summary>
+            Requests the controller count from the server.
+            </summary>
+            <returns>The amount of controllers.</returns>
+        </member>
+        <member name="M:OpenRGB.NET.IOpenRGBClient.GetControllerData(System.Int32)">
+            <summary>
+            Requests the data block for a given controller index.
+            </summary>
+            <param name="id">The index of the controller to request the data from.</param>
+            <returns>The Device containing the decoded data for the controller with the given id.</returns>
+        </member>
+        <member name="M:OpenRGB.NET.IOpenRGBClient.GetProfiles">
+            <summary>
+            Requests existing profiles on the server
+            </summary>
+            <returns>An array with profile names</returns>
+        </member>
+        <member name="M:OpenRGB.NET.IOpenRGBClient.LoadProfile(System.String)">
+            <summary>
+            Loads the provided profile on the server
+            </summary>
+            <param name="profile">Name of the profile to load</param>
+        </member>
+        <member name="M:OpenRGB.NET.IOpenRGBClient.DeleteProfile(System.String)">
+            <summary>
+            Deletes the provided profile on the server
+            </summary>
+            <param name="profile"> Name of the profile to delete</param>
+        </member>
+        <member name="M:OpenRGB.NET.IOpenRGBClient.SaveProfile(System.String)">
+            <summary>
+            Saves the current state as a profile with the provided name
+            </summary>
+            <param name="profile"> Name of the profile to save</param>
+        </member>
+        <member name="M:OpenRGB.NET.IOpenRGBClient.SetCustomMode(System.Int32)">
+            <summary>
+            Sets the mode of the specified device to "Custom".
+            </summary>
+            <param name="deviceId"></param>
+        </member>
+        <member name="M:OpenRGB.NET.IOpenRGBClient.SetMode(System.Int32,System.Int32,System.Nullable{System.UInt32},System.Nullable{OpenRGB.NET.Enums.Direction},OpenRGB.NET.Models.Color[])">
+            <summary>
+            Sets the specified mode on the specified device.
+            Any optional parameters not set will be left as received from the server.
+            </summary>
+            <param name="deviceId"></param>
+            <param name="modeId"></param>
+            <param name="speed"></param>
+            <param name="direction"></param>
+            <param name="colors"></param>
+        </member>
+        <member name="M:OpenRGB.NET.IOpenRGBClient.UpdateLeds(System.Int32,OpenRGB.NET.Models.Color[])">
+            <summary>
+            Updates the LEDs for the give device.
+            Make sure the array has the correct number of LEDs.
+            </summary>
+            <param name="deviceId"></param>
+            <param name="colors"></param>
+        </member>
+        <member name="M:OpenRGB.NET.IOpenRGBClient.UpdateZone(System.Int32,System.Int32,OpenRGB.NET.Models.Color[])">
+            <summary>
+            Updates the LEDs of a given device and zone.
+            Make sure the array has the correct number of LEDs for the zone.
+            </summary>
+            <param name="deviceId"></param>
+            <param name="zoneId"></param>
+            <param name="colors"></param>
+        </member>
+        <member name="T:OpenRGB.NET.Models.Color">
+            <summary>
+            Color class containing three values for red, green and blue.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Color.R">
+            <summary>
+            Red value of the color.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Color.G">
+            <summary>
+            Green value of the color.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Color.B">
+            <summary>
+            Blue value of the color.
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Color.#ctor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Constructs a new color with the specified red, gree, and blue values.
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Color.FromHsv(System.Double,System.Double,System.Double)">
+            <summary>
+            Method used to create a color from HSV values.
+            </summary>
+            <param name="hue"></param>
+            <param name="saturation"></param>
+            <param name="value"></param>
+            <returns>The color converted to RGB</returns>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Color.ToHsv">
+            <summary>
+            Converts a color to HSV.
+            </summary>
+            <returns>Tuple with the HSV values</returns>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Color.Decode(System.IO.BinaryReader,System.UInt16)">
+            <summary>
+            Decodes a byte array into a color array.
+            Increments the offset accordingly.
+            </summary>
+            <param name="reader"></param>
+            <param name="colorCount"></param>
+            <returns>An array of Colors decoded from bytes</returns>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Color.Encode">
+            <summary>
+            Encodes a color into a 4 byte array
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Color.GetHueRainbow(System.Int32,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Generates a smooth rainbow with the given amount of colors.
+            Uses HSV conversion to get a hue-based rainbow.
+            </summary>
+            <param name="amount">How many colors to generate.</param>
+            <param name="hueStart">The hue of the first color</param>
+            <param name="huePercent">How much of the hue scale to use.</param>
+            <param name="saturation">The HSV saturation of the colors</param>
+            <param name="value">The HSV value of the colors.</param>
+            <returns>An collection of Colors in a rainbow pattern.</returns>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Color.GetSinRainbow(System.Int32,System.Int32,System.Int32,System.Double,System.Double)">
+            <summary>
+            Generates a smooth rainbow with the given amount of colors.
+            Uses sine waves to generate the pattern.
+            </summary>
+            <param name="amount">How many colors to generate.</param>
+            <param name="floor">The least bright any given RGB value can be.</param>
+            <param name="width">The brightness variation of any given RGB value.</param>
+            <param name="range">How much of the sine wave is used to generate the colors. Decrese this value to get a fraction of the spectrum. In percent.</param>
+            <param name="offset">The value the first color of the sequence will be generated with.</param>
+            <returns>A collection of Colors in a rainbow pattern.</returns>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Color.Clone">
+            <summary>
+            Returns a new object with the same color value
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Color.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Color.Equals(OpenRGB.NET.Models.Color)">
+            <inheritdoc/>
+        </member>
+        <member name="T:OpenRGB.NET.Models.Device">
+            <summary>
+            Device class containing all the info present in an OpenRGB RGBController
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Device.Type">
+            <summary>
+            The type of the device.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Device.Name">
+            <summary>
+            The name of the device.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Device.Vendor">
+            <summary>
+            The vendor of the device. Will be null on protocol versions below 1.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Device.Description">
+            <summary>
+            The description of device.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Device.Version">
+            <summary>
+            The version of the device. Usually a firmware version.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Device.Serial">
+            <summary>
+            The serial number of the device.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Device.Location">
+            <summary>
+            The location of the device. Usually the device file on the filesystem.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Device.ActiveModeIndex">
+            <summary>
+            The index of the currently active mode on the device.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Device.Modes">
+            <summary>
+            The modes the device can be set to.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Device.Zones">
+            <summary>
+            The lighting zones present on the device.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Device.Leds">
+            <summary>
+            All the leds present on the device.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Device.Colors">
+            <summary>
+            The colors of all the leds present on the device.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Device.ActiveMode">
+            <summary>
+            Shortcut for Modes[ActiveModeIndex], returns the currently actuve mode.
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Device.Decode(System.Byte[],System.UInt32)">
+            <summary>
+            Decodes a byte array into a Device.
+            </summary>
+            <param name="buffer"></param>
+            <param name="protocol"></param>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Device.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:OpenRGB.NET.Models.Led">
+            <summary>
+            Led class containing the name of the LED
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Led.Name">
+            <summary>
+            The name of the led.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Led.Value">
+            <summary>
+            Device specific led value. Most likely not useful for the clients.
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Led.Decode(System.IO.BinaryReader,System.UInt16)">
+            <summary>
+            Decodes a byte array into a LED array.
+            Increments the offset accordingly.
+            </summary>
+            <param name="reader"></param>
+            <param name="ledCount"></param>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Led.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:OpenRGB.NET.Models.MatrixMap">
+            <summary>
+            Matrix Map class for the matrix Zone type
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.MatrixMap.Height">
+            <summary>
+            The height of the matrix.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.MatrixMap.Width">
+            <summary>
+            The width of the matrix.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.MatrixMap.Matrix">
+            <summary>
+            The matrix.
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.Models.MatrixMap.Decode(System.IO.BinaryReader)">
+            <summary>
+            Decodes a byte array into a matrix map
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="T:OpenRGB.NET.Models.Mode">
+            <summary>
+            Mode class containing the parameters one mode has.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Mode.Name">
+            <summary>
+            The name of the mode.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Mode.Value">
+            <summary>
+            Device specific value for this mode. Most likely not useful for the client.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Mode.Flags">
+            <summary>
+            Flags containing the features this mode supports.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Mode.SpeedMin">
+            <summary>
+            The minimum speed value this mode supports.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Mode.SpeedMax">
+            <summary>
+            The maximum speed value this mode supports.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Mode.ColorMin">
+            <summary>
+            The minimum number of colors this mode supports.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Mode.ColorMax">
+            <summary>
+            The maximum number of colors this mode supports.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Mode.Speed">
+            <summary>
+            The current speed value of this mode.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Mode.Direction">
+            <summary>
+            The current direction of this mode.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Mode.ColorMode">
+            <summary>
+            Mode representing how the Colors are used for effects.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Mode.Colors">
+            <summary>
+            The colors this mode uses for lighting.
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Mode.HasFlag(OpenRGB.NET.Enums.ModeFlags)">
+            <summary>
+            Determines if the feature is supported in the flags.
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Mode.Decode(System.IO.BinaryReader,System.UInt16)">
+            <summary>
+            Decodes a byte array into a Mode array.
+            Increments the offset accordingly.
+            </summary>
+            <param name="reader"></param>
+            <param name="numModes"></param>
+        </member>
+        <member name="T:OpenRGB.NET.Models.PacketHeader">
+            <summary>
+            Packet Header class containing the command ID and the length of the data to be sent.
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.Models.PacketHeader.Encode">
+            <summary>
+            Converts the packet into a byte array to send to the server.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OpenRGB.NET.Models.PacketHeader.Decode(System.Byte[])">
+            <summary>
+            Decodes a byte array into a PacketHeader
+            </summary>
+            <param name="buffer"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenRGB.NET.Models.Zone">
+            <summary>
+            Zone class containing the name, type and size of a Zone.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Zone.Name">
+            <summary>
+            The name of the zone.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Zone.Type">
+            <summary>
+            The type of the zone.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Zone.LedCount">
+            <summary>
+            How many leds the zone has.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Zone.LedsMin">
+            <summary>
+            Minimum number of leds in the zone
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Zone.LedsMax">
+            <summary>
+            Maximum number of leds in the zone
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.Models.Zone.MatrixMap">
+            <summary>
+            A 2d Matrix containing the LED positions on the zone. Will be null if ZoneType is not ZoneType.MatrixMap
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.Models.Zone.Decode(System.IO.BinaryReader,System.UInt16)">
+            <summary>
+            Decodes a byte array into a Zone array.
+            Increments the offset accordingly
+            </summary>
+            <param name="reader"></param>
+            <param name="zoneCount"></param>
+        </member>
+        <member name="T:OpenRGB.NET.OpenRGBClient">
+            <summary>
+            Client for the OpenRGB SDK.
+            </summary>
+        </member>
+        <member name="P:OpenRGB.NET.OpenRGBClient.Connected">
+            <inheritdoc/>
+        </member>
+        <member name="P:OpenRGB.NET.OpenRGBClient.MaxSupportedProtocolVersion">
+            <inheritdoc/>
+        </member>
+        <member name="P:OpenRGB.NET.OpenRGBClient.ClientProtocolVersion">
+            <inheritdoc/>
+        </member>
+        <member name="P:OpenRGB.NET.OpenRGBClient.ProtocolVersion">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.#ctor(System.String,System.Int32,System.String,System.Boolean,System.Int32,System.UInt32)">
+            <summary>
+            Sets all the needed parameters to connect to the server.
+            Connects to the server immediately unless autoconnect is set to false.
+            </summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+            <param name="name"></param>
+            <param name="autoconnect"></param>
+            <param name="timeout"></param>
+            <param name="protocolVersion"></param>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.Connect">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.SendMessage(OpenRGB.NET.CommandId,System.Collections.Generic.IEnumerable{System.Byte},System.UInt32)">
+            <summary>
+            Sends a message to the server with the given command and buffer of data.
+            Takes care of sending a header packet first to tell the server how many bytes to read.
+            </summary>
+            <param name="command"></param>
+            <param name="buffer"></param>
+            <param name="deviceId"></param>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.ReadMessage">
+            <summary>
+            Reads data from the server. Receives the header packet first to know how many bytes to read.
+            </summary>
+            <returns>the data received from the server</returns>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.GetControllerCount">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.GetControllerData(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.GetAllControllerData">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.EnumerateControllerData">
+            <summary>
+            Enumerates all controllers instead of returning an array containing all of them.
+            </summary>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.GetProfiles">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.UpdateLeds(System.Int32,OpenRGB.NET.Models.Color[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.UpdateZone(System.Int32,System.Int32,OpenRGB.NET.Models.Color[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.SetCustomMode(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.LoadProfile(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.SaveProfile(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.DeleteProfile(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.SetMode(System.Int32,System.Int32,System.Nullable{System.UInt32},System.Nullable{OpenRGB.NET.Enums.Direction},OpenRGB.NET.Models.Color[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:OpenRGB.NET.OpenRGBClient.Dispose">
+            <summary>
+            Disposes of the connection to the server.
+            To connect again, instantiate a new OpenRGBClient.
+            </summary>
+        </member>
+        <member name="T:OpenRGB.NET.Utils.BinaryStringExtensions">
+            <summary>
+            Utility methods to read and write strings into / from a buffer in the format OpenRGB expects
+            </summary>
+        </member>
+    </members>
+</doc>
