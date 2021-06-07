@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Helpers;
+using WebRGB.Classes;
 using WebRGB.Service;
 
 namespace BlazorApp.Server.Controllers
@@ -12,10 +14,10 @@ namespace BlazorApp.Server.Controllers
     public class WebRgbController : Controller
     {
         [HttpGet]
-        public void Get()
+        public IEnumerable<DeviceDto> Get()
         {
             var rgbSerice = new RGBService(23);
-            rgbSerice.Test();
+            return rgbSerice.GetDevices().ToArray();
         }
     }
 }

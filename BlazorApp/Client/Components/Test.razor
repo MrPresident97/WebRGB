@@ -1,10 +1,29 @@
 ﻿@page "/testrgb"
+@using BlazorApp.Client.Classes;
+@using WebRGB.Classes;
 @inject HttpClient Http
 <div class="test-box">
+    @if (deviceList != null)
+    {
+        @foreach (DeviceDto dev in deviceList)
+        {
+            <RGBItem Name="@dev.Name" Type="@dev.Type" />
+        }
+    }
+    else
+    {
+        <h2>Loading...</h2>
+    }
     <button @onclick="@TestRgb">RGB!</button>
 </div>
 
 @code {
+    protected DeviceDto[] deviceList;
+    protected override async Task OnInitializedAsync()
+    {
+        deviceList = await Http.GetFromJsonAsync<DeviceDto[]>("WebRgb");
+    }
+
     private async Task TestRgb()
     {
         await Http.GetAsync("WebRgb");

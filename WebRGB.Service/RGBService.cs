@@ -1,6 +1,9 @@
 ﻿using OpenRGB.NET;
 using OpenRGB.NET.Models;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using WebRGB.Classes;
 
 namespace WebRGB.Service
 {
@@ -26,8 +29,20 @@ namespace WebRGB.Service
             }
             for (int i = 0; i < controllers; i++)
             {
+                var data = client.GetAllControllerData();
                 client.UpdateLeds(i, colors);
             }
+        }
+
+        public List<DeviceDto> GetDevices()
+        {
+            using OpenRGBClient client = new OpenRGBClient();
+            var controllerData = client.GetAllControllerData();
+            return controllerData.Select(d => new DeviceDto
+            {
+                Type = d.Type.ToString(),
+                Name = d.Name
+            }).ToList();
         }
     }
 }

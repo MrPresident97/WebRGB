@@ -440,6 +440,16 @@
         "runtime": {
           "bin/placeholder/BlazorApp.Shared.dll": {}
         }
+      },
+      "WebRGB.Classes/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/WebRGB.Classes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebRGB.Classes.dll": {}
+        }
       }
     }
   },
@@ -1641,6 +1651,11 @@
       "type": "project",
       "path": "../Shared/BlazorApp.Shared.csproj",
       "msbuildProject": "../Shared/BlazorApp.Shared.csproj"
+    },
+    "WebRGB.Classes/1.0.0": {
+      "type": "project",
+      "path": "../../WebRGB.Classes/WebRGB.Classes.csproj",
+      "msbuildProject": "../../WebRGB.Classes/WebRGB.Classes.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1649,7 +1664,8 @@
       "Microsoft.AspNetCore.Components.WebAssembly >= 3.2.1",
       "Microsoft.AspNetCore.Components.WebAssembly.Build >= 3.2.1",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 3.2.1",
-      "System.Net.Http.Json >= 3.2.0"
+      "System.Net.Http.Json >= 3.2.0",
+      "WebRGB.Classes >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1686,6 +1702,9 @@
           "projectReferences": {
             "C:\\Users\\Marcello\\source\\repos\\WebRGB\\BlazorApp\\Shared\\BlazorApp.Shared.csproj": {
               "projectPath": "C:\\Users\\Marcello\\source\\repos\\WebRGB\\BlazorApp\\Shared\\BlazorApp.Shared.csproj"
+            },
+            "C:\\Users\\Marcello\\source\\repos\\WebRGB\\WebRGB.Classes\\WebRGB.Classes.csproj": {
+              "projectPath": "C:\\Users\\Marcello\\source\\repos\\WebRGB\\WebRGB.Classes\\WebRGB.Classes.csproj"
             }
           }
         }

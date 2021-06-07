@@ -75,6 +75,20 @@ using BlazorApp.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Client\Components\Test.razor"
+using BlazorApp.Client.Classes;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Client\Components\Test.razor"
+using WebRGB.Classes;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/testrgb")]
     public partial class Test : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -84,8 +98,14 @@ using BlazorApp.Client.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 7 "C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Client\Components\Test.razor"
+#line 20 "C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Client\Components\Test.razor"
        
+    protected DeviceDto[] deviceList;
+    protected override async Task OnInitializedAsync()
+    {
+        deviceList = await Http.GetFromJsonAsync<DeviceDto[]>("WebRgb");
+    }
+
     private async Task TestRgb()
     {
         await Http.GetAsync("WebRgb");

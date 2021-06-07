@@ -33,6 +33,7 @@
         "dependencies": {
           "BlazorApp.Client": "1.0.0",
           "BlazorApp.Shared": "1.0.0",
+          "Microsoft.AspNet.WebPages": "3.2.7",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "3.2.1",
           "WebRGB.Service": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -302,6 +303,47 @@
         },
         "compile": {
           "BlazorApp.Server.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Razor/3.2.7": {
+        "runtime": {
+          "lib/net45/System.Web.Razor.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.61128.0"
+          }
+        },
+        "compile": {
+          "lib/net45/System.Web.Razor.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebPages/3.2.7": {
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "3.2.7",
+          "Microsoft.Web.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "lib/net45/System.Web.Helpers.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.61128.0"
+          },
+          "lib/net45/System.Web.WebPages.Deployment.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.61128.0"
+          },
+          "lib/net45/System.Web.WebPages.Razor.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.61128.0"
+          },
+          "lib/net45/System.Web.WebPages.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.61128.0"
+          }
+        },
+        "compile": {
+          "lib/net45/System.Web.Helpers.dll": {},
+          "lib/net45/System.Web.WebPages.Deployment.dll": {},
+          "lib/net45/System.Web.WebPages.Razor.dll": {},
+          "lib/net45/System.Web.WebPages.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authorization/3.1.6": {
@@ -629,6 +671,17 @@
           "lib/netstandard2.1/Microsoft.JSInterop.WebAssembly.dll": {}
         }
       },
+      "Microsoft.Web.Infrastructure/1.0.0": {
+        "runtime": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.20105.407"
+          }
+        },
+        "compile": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
+        }
+      },
       "System.Net.Http.Json/3.2.0": {
         "dependencies": {
           "System.Text.Json": "4.7.1"
@@ -658,7 +711,8 @@
         "dependencies": {
           "BlazorApp.Shared": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "3.2.1",
-          "System.Net.Http.Json": "3.2.0"
+          "System.Net.Http.Json": "3.2.0",
+          "WebRGB.Classes": "1.0.0"
         },
         "runtime": {
           "BlazorApp.Client.dll": {}
@@ -675,7 +729,18 @@
           "BlazorApp.Shared.dll": {}
         }
       },
+      "WebRGB.Classes/1.0.0": {
+        "runtime": {
+          "WebRGB.Classes.dll": {}
+        },
+        "compile": {
+          "WebRGB.Classes.dll": {}
+        }
+      },
       "WebRGB.Service/1.0.0": {
+        "dependencies": {
+          "WebRGB.Classes": "1.0.0"
+        },
         "runtime": {
           "WebRGB.Service.dll": {}
         },
@@ -2265,6 +2330,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.AspNet.Razor/3.2.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BpWEZ+Ys7g9VAkbAfpG5jr5A1fKcmadCCXv3fYfps5YfTVABJIGV4uc9yvmXKxsNsjL+BzDld2gs+xtgT2gg1g==",
+      "path": "microsoft.aspnet.razor/3.2.7",
+      "hashPath": "microsoft.aspnet.razor.3.2.7.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebPages/3.2.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2jwZFB7PvY+tbdz0ZP4iEo7gMrJxkCQUzoGLh6swUc6ZXl6DoKyDslmGcC/j9PFmJXCRMVIqtRorlPSMU2DuRA==",
+      "path": "microsoft.aspnet.webpages/3.2.7",
+      "hashPath": "microsoft.aspnet.webpages.3.2.7.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Authorization/3.1.6": {
       "type": "package",
       "serviceable": true,
@@ -2440,6 +2519,13 @@
       "path": "microsoft.jsinterop.webassembly/3.2.1",
       "hashPath": "microsoft.jsinterop.webassembly.3.2.1.nupkg.sha512"
     },
+    "Microsoft.Web.Infrastructure/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
+      "path": "microsoft.web.infrastructure/1.0.0",
+      "hashPath": "microsoft.web.infrastructure.1.0.0.nupkg.sha512"
+    },
     "System.Net.Http.Json/3.2.0": {
       "type": "package",
       "serviceable": true,
@@ -2460,6 +2546,11 @@
       "sha512": ""
     },
     "BlazorApp.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebRGB.Classes/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

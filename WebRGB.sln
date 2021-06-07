@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp.Server", "BlazorApp\Server\BlazorApp.Server.csproj", "{7555DD52-B78A-49FD-9DDC-8367C55B352F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.Server", "BlazorApp\Server\BlazorApp.Server.csproj", "{7555DD52-B78A-49FD-9DDC-8367C55B352F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp.Client", "BlazorApp\Client\BlazorApp.Client.csproj", "{FD878B42-FD5D-4634-BA26-E5C9710DC4B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.Client", "BlazorApp\Client\BlazorApp.Client.csproj", "{FD878B42-FD5D-4634-BA26-E5C9710DC4B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp.Shared", "BlazorApp\Shared\BlazorApp.Shared.csproj", "{17DC14E0-6F55-4135-9D0A-B070D8FE4CB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.Shared", "BlazorApp\Shared\BlazorApp.Shared.csproj", "{17DC14E0-6F55-4135-9D0A-B070D8FE4CB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRGB.Service", "WebRGB.Service\WebRGB.Service.csproj", "{9AAC403C-1CA5-4185-8044-37FE55DD6A4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebRGB.Service", "WebRGB.Service\WebRGB.Service.csproj", "{9AAC403C-1CA5-4185-8044-37FE55DD6A4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRGB.Classes", "WebRGB.Classes\WebRGB.Classes.csproj", "{B9147A65-9BDB-4E11-AAF3-5A9549ED988F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9AAC403C-1CA5-4185-8044-37FE55DD6A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AAC403C-1CA5-4185-8044-37FE55DD6A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AAC403C-1CA5-4185-8044-37FE55DD6A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9147A65-9BDB-4E11-AAF3-5A9549ED988F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9147A65-9BDB-4E11-AAF3-5A9549ED988F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9147A65-9BDB-4E11-AAF3-5A9549ED988F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9147A65-9BDB-4E11-AAF3-5A9549ED988F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

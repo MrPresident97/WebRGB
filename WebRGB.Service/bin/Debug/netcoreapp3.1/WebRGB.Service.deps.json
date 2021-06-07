@@ -8,10 +8,16 @@
     ".NETCoreApp,Version=v3.1": {
       "WebRGB.Service/1.0.0": {
         "dependencies": {
+          "WebRGB.Classes": "1.0.0",
           "OpenRGB.NET": "1.7.0.0"
         },
         "runtime": {
           "WebRGB.Service.dll": {}
+        }
+      },
+      "WebRGB.Classes/1.0.0": {
+        "runtime": {
+          "WebRGB.Classes.dll": {}
         }
       },
       "OpenRGB.NET/1.7.0.0": {
@@ -26,6 +32,11 @@
   },
   "libraries": {
     "WebRGB.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebRGB.Classes/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

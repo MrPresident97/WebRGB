@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "WebRGB.Classes/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/WebRGB.Classes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebRGB.Classes.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "WebRGB.Classes/1.0.0": {
+      "type": "project",
+      "path": "../WebRGB.Classes/WebRGB.Classes.csproj",
+      "msbuildProject": "../WebRGB.Classes/WebRGB.Classes.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "WebRGB.Classes >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Marcello\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Marcello\\source\\repos\\WebRGB\\WebRGB.Classes\\WebRGB.Classes.csproj": {
+              "projectPath": "C:\\Users\\Marcello\\source\\repos\\WebRGB\\WebRGB.Classes\\WebRGB.Classes.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

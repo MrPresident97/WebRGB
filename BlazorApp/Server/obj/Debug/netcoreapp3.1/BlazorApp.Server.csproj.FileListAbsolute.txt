@@ -218,3 +218,11 @@ C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Server\bin\Debug\netcoreapp3.1\O
 C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Server\bin\Debug\netcoreapp3.1\WebRGB.Service.pdb
 C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Server\bin\Debug\netcoreapp3.1\OpenRGB.NET.pdb
 C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Server\bin\Debug\netcoreapp3.1\OpenRGB.NET.xml
+C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Server\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Server\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Server\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Server\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Server\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Server\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Server\bin\Debug\netcoreapp3.1\WebRGB.Classes.dll
+C:\Users\Marcello\source\repos\WebRGB\BlazorApp\Server\bin\Debug\netcoreapp3.1\WebRGB.Classes.pdb

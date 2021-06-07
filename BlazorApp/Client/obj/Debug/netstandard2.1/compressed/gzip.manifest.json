@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\LpdNz7xVyekWju9GYgTLZvOwMZyeZ9jZ1nkhJmXaGA4=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\q8W2sXbvjyrlWPoiWv52VQYQY0_SKUjWqXmmGomjjyk=.hash",
       "Source": "C:\\Users\\Marcello\\source\\repos\\WebRGB\\BlazorApp\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\BlazorApp.Client.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/BlazorApp.Client.dll.gz"
     },
@@ -191,6 +191,11 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Extensions.Logging.Abstractions.dll.gz"
     },
     {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\NlDQn9cAuRRa83tA5tyi6kDOjwlhzfqc49V8lK4xTP0=.hash",
+      "Source": "C:\\Users\\Marcello\\source\\repos\\WebRGB\\BlazorApp\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\WebRGB.Classes.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/WebRGB.Classes.dll.gz"
+    },
+    {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\0StOPHgtl0arTo4N17Ny5O_YwD8LdI4RjItwjaVpbPw=.hash",
       "Source": "C:\\Users\\Marcello\\source\\repos\\WebRGB\\BlazorApp\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\BlazorApp.Shared.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/BlazorApp.Shared.dll.gz"
@@ -266,9 +271,14 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\DBf71s2J-Jd7mzuCeg_1kFjnGCjd6iP3HB_lbD0_R6Y=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\AT9OEqb9s8uJp_pcUfbheSObn5-W8tQZGND26QT_6To=.hash",
       "Source": "C:\\Users\\Marcello\\source\\repos\\WebRGB\\BlazorApp\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\BlazorApp.Client.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/BlazorApp.Client.pdb.gz"
+    },
+    {
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\4NzavbwwqcyKxhHQ6nRhOcKvkqTa3XXu6dYPShk6B2I=.hash",
+      "Source": "C:\\Users\\Marcello\\source\\repos\\WebRGB\\BlazorApp\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\WebRGB.Classes.pdb",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/WebRGB.Classes.pdb.gz"
     },
     {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\KQW8VNifHAnR-E7kdFJuDDj_msYdH_pssSr5XtWYfik=.hash",
@@ -296,7 +306,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\6qCP7hn5zAtSocrCvMXAy-gSFR-9S0CAORtTRgNTqmQ=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\RpAGUsnBlKbJ92AfrfLlmiVwrFiqEocAIQqbV8YLtrw=.hash",
       "Source": "C:\\Users\\Marcello\\source\\repos\\WebRGB\\BlazorApp\\Client\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.gz"
     }

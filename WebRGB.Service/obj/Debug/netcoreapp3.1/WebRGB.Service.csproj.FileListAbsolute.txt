@@ -11,3 +11,5 @@ C:\Users\Marcello\source\repos\WebRGB\WebRGB.Service\obj\Debug\netcoreapp3.1\Web
 C:\Users\Marcello\source\repos\WebRGB\WebRGB.Service\obj\Debug\netcoreapp3.1\WebRGB.Service.csproj.CopyComplete
 C:\Users\Marcello\source\repos\WebRGB\WebRGB.Service\obj\Debug\netcoreapp3.1\WebRGB.Service.dll
 C:\Users\Marcello\source\repos\WebRGB\WebRGB.Service\obj\Debug\netcoreapp3.1\WebRGB.Service.pdb
+C:\Users\Marcello\source\repos\WebRGB\WebRGB.Service\bin\Debug\netcoreapp3.1\WebRGB.Classes.dll
+C:\Users\Marcello\source\repos\WebRGB\WebRGB.Service\bin\Debug\netcoreapp3.1\WebRGB.Classes.pdb

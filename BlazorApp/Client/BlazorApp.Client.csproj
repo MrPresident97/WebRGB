@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\WebRGB.Classes\WebRGB.Classes.csproj" />
     <ProjectReference Include="..\Shared\BlazorApp.Shared.csproj" />
   </ItemGroup>
 

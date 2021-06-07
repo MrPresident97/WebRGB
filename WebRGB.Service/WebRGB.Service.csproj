@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WebRGB.Classes\WebRGB.Classes.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="OpenRGB.NET">
       <HintPath>..\..\OpenRGB.NET\OpenRGB.NET\bin\Debug\netstandard2.0\OpenRGB.NET.dll</HintPath>
     </Reference>
